@@ -10,7 +10,6 @@ const vendor = [
   "react-router-dom",
   "antd",
   "axios",
-  "turf-jsts",
   "lodash"
 ];
 
