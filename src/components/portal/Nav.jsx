@@ -2,7 +2,7 @@
  * @Author: 史涛
  * @Date: 2019-01-05 19:36:30
  * @Last Modified by: 史涛
- * @Last Modified time: 2020-03-17 15:03:24
+ * @Last Modified time: 2020-03-18 13:51:52
  */
 
 import React from "react";
@@ -124,7 +124,7 @@ class Header extends React.Component {
         >
           {/* <img width="100%" src={logopng} /> */}
           <NavLink to="/">
-            <span className="logotitle">如皋市时空大数据平台</span>
+            <span className="logotitle">管理单元数据采集系统</span>
           </NavLink>
         </TweenOne>
 
