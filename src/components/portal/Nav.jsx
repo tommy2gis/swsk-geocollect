@@ -2,7 +2,7 @@
  * @Author: 史涛
  * @Date: 2019-01-05 19:36:30
  * @Last Modified by: 史涛
- * @Last Modified time: 2020-03-18 13:51:52
+ * @Last Modified time: 2020-03-19 11:15:15
  */
 
 import React from "react";
@@ -50,11 +50,11 @@ class Header extends React.Component {
       },
       {
         title: "数据审核",
-        link: "/dataaudit"
+        link: "/audit"
       },
       {
         title: "运维管理",
-        link: "/operation"
+        link: "/devops"
       }
     ];
     const displayname =
