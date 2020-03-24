@@ -17,7 +17,7 @@ export default class index extends Component {
       <Layout className="layout">
         <Nav></Nav>
         <Layout style={{ marginTop: 60 }}>
-          <Sider className="site-layout-background" width={200}>
+          <Sider className="site-layout-background" width={120}>
            <LeftMenu></LeftMenu>
           </Sider>
           <Content>运维首页</Content>

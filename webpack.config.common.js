@@ -120,11 +120,7 @@ module.exports = {
                 }
             ]
         }),
-        new CopyWebpackPlugin([{
-                from: path.resolve(__dirname, './src/routes/MapClient/components/MapBoxGL/styles'),
-                to: 'mapboxstyle',
-                ignore: ['.*']
-            },
+        new CopyWebpackPlugin([
             {
                 from: path.resolve(__dirname, './src/static'),
                 to: path.resolve(__dirname, './dist'),

@@ -138,7 +138,7 @@ class Header extends React.Component {
             <div
               className={`${this.props.className}-phone-nav-bar`}
               onClick={() => {
-                this.phoneClick();
+                this.phoneClick();  
               }}
             >
               <em />
@@ -147,7 +147,7 @@ class Header extends React.Component {
             </div>
             <div className={`${this.props.className}-phone-nav-text`}>
               <Menu defaultSelectedKeys={["0"]} mode="inline" theme="dark">
-                {navChildren}
+                {navChildren} 
               </Menu>
             </div>
           </div>

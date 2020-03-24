@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Nav from "../../components/portal/Nav";
 import { Layout} from "antd";
-import LeftMenu from './modules/menu'
+import LeftMenu from './modules/menu';
+import UserContent from './modules/usercontent'
 import "./style.less";
 
 const { Content, Sider } = Layout;
@@ -17,10 +18,10 @@ export default class UserManage extends Component {
       <Layout className="layout">
         <Nav></Nav>
         <Layout style={{ marginTop: 60 }}>
-          <Sider className="site-layout-background" width={200}>
+          <Sider className="site-layout-background" width={120}>
            <LeftMenu></LeftMenu>
           </Sider>
-          <Content>用户管理</Content>
+          <Content><UserContent></UserContent></Content>
         </Layout>
       </Layout>
     );
