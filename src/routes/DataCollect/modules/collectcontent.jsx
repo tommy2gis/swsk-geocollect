@@ -1,7 +1,18 @@
 import React, { Component } from "react";
-import { Card, Table, Descriptions, Select,Cascader,Input,DatePicker,Button  } from "antd";
+import {
+  Card,
+  Table,
+  Descriptions,
+  Select,
+  Cascader,
+  Input,
+  DatePicker,
+  Button,
+  Drawer
+} from "antd";
 const { RangePicker } = DatePicker;
 const { Option } = Select;
+
 
 export default class CollectContent extends Component {
   onSelectChange = (selectedRowKeys, selectedRows) => {
@@ -11,40 +22,45 @@ export default class CollectContent extends Component {
       selectedRows
     );
   };
+
+  
+
+
+
   render() {
     const options = [
       {
-        value: 'zhejiang',
-        label: 'Zhejiang',
+        value: "zhejiang",
+        label: "Zhejiang",
         children: [
           {
-            value: 'hangzhou',
-            label: 'Hangzhou',
+            value: "hangzhou",
+            label: "Hangzhou",
             children: [
               {
-                value: 'xihu',
-                label: 'West Lake',
-              },
-            ],
-          },
-        ],
+                value: "xihu",
+                label: "West Lake"
+              }
+            ]
+          }
+        ]
       },
       {
-        value: 'jiangsu',
-        label: 'Jiangsu',
+        value: "jiangsu",
+        label: "Jiangsu",
         children: [
           {
-            value: 'nanjing',
-            label: 'Nanjing',
+            value: "nanjing",
+            label: "Nanjing",
             children: [
               {
-                value: 'zhonghuamen',
-                label: 'Zhong Hua Men',
-              },
-            ],
-          },
-        ],
-      },
+                value: "zhonghuamen",
+                label: "Zhong Hua Men"
+              }
+            ]
+          }
+        ]
+      }
     ];
     const columns = [
       {
@@ -87,59 +103,63 @@ export default class CollectContent extends Component {
         address: "Sidney No. 1 Lake Park"
       }
     ];
-    return (
-      <>
-        <Card className="datacollect_filtercard">
-          <Descriptions>
-            <Descriptions.Item label="数据报送">
-              <Select defaultValue="lucy" style={{ width: 120 }}>
-                <Option value="jack">Jack</Option>
-                <Option value="lucy">Lucy</Option>
-                <Option value="Yiminghe">yiminghe</Option>
-              </Select>
-            </Descriptions.Item>
-            <Descriptions.Item label="采集人">
-              <Select defaultValue="lucy" style={{ width: 120 }}>
-                <Option value="jack">Jack</Option>
-                <Option value="lucy">Lucy</Option>
-                <Option value="Yiminghe">yiminghe</Option>
-              </Select></Descriptions.Item>
+    return (<>
+      <Card className="datacollect_filtercard">
+        <Descriptions>
+          <Descriptions.Item label="数据报送">
+            <Select defaultValue="lucy" style={{ width: 120 }}>
+              <Option value="jack">Jack</Option>
+              <Option value="lucy">Lucy</Option>
+              <Option value="Yiminghe">yiminghe</Option>
+            </Select>
+          </Descriptions.Item>
+          <Descriptions.Item label="采集人">
+            <Select defaultValue="lucy" style={{ width: 120 }}>
+              <Option value="jack">Jack</Option>
+              <Option value="lucy">Lucy</Option>
+              <Option value="Yiminghe">yiminghe</Option>
+            </Select>
+          </Descriptions.Item>
 
-            <Descriptions.Item label="地区"><Cascader options={options}  placeholder="请选择" /></Descriptions.Item>
-            <Descriptions.Item label="条件">
+          <Descriptions.Item label="地区">
+            <Cascader options={options} placeholder="请选择" />
+          </Descriptions.Item>
+          <Descriptions.Item label="条件">
             <Input.Group compact>
               <Select defaultValue="Zhejiang">
                 <Option value="Zhejiang">Zhejiang</Option>
                 <Option value="Jiangsu">Jiangsu</Option>
               </Select>
-              <Input style={{ width: '200px' }} placeholder="请输入关键字" />
+              <Input style={{ width: "200px" }} placeholder="请输入关键字" />
             </Input.Group>
-            </Descriptions.Item>
-            <Descriptions.Item label="条件">
+          </Descriptions.Item>
+          <Descriptions.Item label="条件">
             <Input.Group compact>
               <Select defaultValue="Zhejiang">
                 <Option value="Zhejiang">Zhejiang</Option>
                 <Option value="Jiangsu">Jiangsu</Option>
               </Select>
-              <RangePicker  />
+              <RangePicker />
             </Input.Group>
-            </Descriptions.Item>
-            <Descriptions.Item >
-              <Button style={{marginLeft:80,marginRight:40}}>搜索</Button><a>重置搜索条件</a>
-            </Descriptions.Item>
-          </Descriptions>
-        </Card>
-        <Card className="datacollect_list">
-          <Table
-            rowSelection={{
-              type: "checkbox",
-              onSelectChange: this.onSelectChange
-            }}
-            columns={columns}
-            dataSource={data}
-          />
-        </Card>
-      </>
+          </Descriptions.Item>
+          <Descriptions.Item>
+            <Button style={{ marginLeft: 80, marginRight: 40 }}>搜索</Button>
+            <a>重置搜索条件</a>
+          </Descriptions.Item>
+        </Descriptions>
+      </Card>
+      <Card className="datacollect_list">
+        <Table
+          rowSelection={{
+            type: "checkbox",
+            onSelectChange: this.onSelectChange
+          }}
+          columns={columns}
+          dataSource={data}
+        />
+      </Card>
+    </>
+      
     );
   }
 }

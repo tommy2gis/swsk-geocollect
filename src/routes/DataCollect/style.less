@@ -1,34 +1,53 @@
-.datacollect_sider{
-    background: transparent;
-    .ant-layout-sider-children {
+.datacollect_sider {
+  background: transparent;
+  .ant-layout-sider-children {
     padding: 20px;
-    .ant-tree{
-        padding: 10px;
-    margin-top: 10px;
-    border-radius: 2px;
-    height: calc(100vh - 140px);
+    .ant-tree {
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 2px;
+      height: calc(100vh - 150px);
+      overflow-y: auto;
     }
-    .ant-input-search{
-        border: 0px;
+    .ant-input-search {
+      border: 0px;
     }
-}
-}
-
-.datacollect_filtercard{
-    margin: 20px 20px 20px 0px !important;
-    .ant-descriptions{
-        margin: 0px 60px;
-    }
-    .ant-descriptions-item-label {
-        width: 80px;
-        text-align: right;
-    }
+  }
 }
 
-.datacollect_list{
-    margin-right: 20px !important;
-    height: calc(100vh - 270px);
-    .ant-table-column-sorter{
-        display: none;
-    }
+.datacollect_filtercard {
+  margin: 20px 20px 20px 0px !important;
+  .ant-descriptions {
+    margin: 0px 60px;
+  }
+  .ant-descriptions-item-label {
+    width: 80px;
+    text-align: right;
+  }
+}
+
+.datacollect_list {
+  margin-right: 20px !important;
+  height: calc(100vh - 270px);
+  overflow-y: auto;
+  .ant-table-column-sorter {
+    display: none;
+  }
+}
+
+.datacollect_edit {
+  margin: 20px !important;
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+  .ant-form-item {
+    margin-bottom: 50px;
+  }
+  .ant-upload-list-item {
+    height: 60px;
+    background: rgba(74, 155, 247, 0.1);
+    border-radius: 4px;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 12px;
+  }
 }
