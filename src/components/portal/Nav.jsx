@@ -117,52 +117,10 @@ class Header extends React.Component {
         animation={{ opacity: 1, type: "from" }}
         {...props}
       >
-        <TweenOne
-          className={`${this.props.className}-logo`}
-          animation={{ x: -30, delay: 100, type: "from", ease: "easeOutQuad" }}
-          id={`${this.props.id}-logo`}
-        >
-          {/* <img width="100%" src={logopng} /> */}
           <NavLink to="/">
             <span className="logotitle">管理单元数据采集系统</span>
           </NavLink>
-        </TweenOne>
-
-        {isMobile ? (
-          <div
-            className={`${this.props.className}-phone-nav${
-              this.state.phoneOpen ? " open" : ""
-            }`}
-            id={`${this.props.id}-menu`}
-          >
-            <div
-              className={`${this.props.className}-phone-nav-bar`}
-              onClick={() => {
-                this.phoneClick();  
-              }}
-            >
-              <em />
-              <em />
-              <em />
-            </div>
-            <div className={`${this.props.className}-phone-nav-text`}>
-              <Menu defaultSelectedKeys={["0"]} mode="inline" theme="dark">
-                {navChildren} 
-              </Menu>
-            </div>
-          </div>
-        ) : (
-          <TweenOne
-            animation={{
-              x: 30,
-              delay: 100,
-              opacity: 0,
-              type: "from",
-              ease: "easeOutQuad"
-            }}
-            className={`${this.props.className}-nav`}
-          >
-            <Menu
+        <Menu
               mode="horizontal"
               defaultSelectedKeys={["/home"]}
               selectedKeys={[pathname]}
@@ -172,8 +130,6 @@ class Header extends React.Component {
             >
               {navChildren}
             </Menu>
-          </TweenOne>
-        )}
       </TweenOne>
     );
   }

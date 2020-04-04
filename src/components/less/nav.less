@@ -9,25 +9,7 @@
   position: fixed;
   background: radial-gradient(circle, #5c7be0, #4869d4);
   top: 0;
-  &-logo {
-    display: inline-block;
-    position: absolute;
-    width: 350px;
-    line-height: 64px;
-    font-size: 30px;
-    color: #fff;
-    margin-left: 50px;
-    & img {
-      vertical-align: middle;
-      display: inline-block;
-      margin: 0 10px;
-      width: auto;
-      height: 70px;
-    }
-    & a {
-      display: block;
-    }
-    .logotitle
+  .logotitle
     {
        height: 32px;
        width:210px;
@@ -35,16 +17,12 @@
        font-size: 30px;
        color: #FFF;
     }
-  }
-  &-nav {
-    float: right;
-    line-height: 64px;
-    position: relative;
-    margin-right: 4%;
-    & .ant-menu-horizontal {
-      border-bottom-color: transparent;
-    }
+
     .ant-menu {
+      float: right;
+      line-height: 64px;
+      position: relative;
+      margin-right: 4%;
       background: transparent;
       color: @template-text-color-light;
       line-height: 62px;
@@ -83,15 +61,7 @@
         //border-bottom-color: #fff !important;
       }
     }
-    & .ant-menu-horizontal > .ant-menu-item-active {
-      color: @link-hover-color;
-      border-bottom-color: @link-hover-color;
 
-    }
-    .ant-menu-horizontal > .ant-menu-item>a:hover {
-      color: #dcdcdc !important;
-    }
-  }
   &-nav, &-phone-nav {
     .ant-menu {
       li i {

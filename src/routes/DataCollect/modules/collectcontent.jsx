@@ -12,6 +12,7 @@ import {
 } from "antd";
 const { RangePicker } = DatePicker;
 const { Option } = Select;
+import { PlusCircleOutlined } from '@ant-design/icons';
 
 
 export default class CollectContent extends Component {
@@ -149,6 +150,9 @@ export default class CollectContent extends Component {
         </Descriptions>
       </Card>
       <Card className="datacollect_list">
+       <Button  type="primary" icon={<PlusCircleOutlined />}>
+            添加
+       </Button>
         <Table
           rowSelection={{
             type: "checkbox",
